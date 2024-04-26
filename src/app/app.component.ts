@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   LoadMessage() {
-    const url = 'http://dev-sugaapp-be.sakuramobile.jp';
+    const url = 'https://dev-sugaapp-be.sakuramobile.jp';
     this.httpClient.get(url).subscribe({
       next: (response: any) => {
         this.messages= response;
@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
     public postMessageContent(message: string): void {
-    const url = 'http://dev-sugaapp-fe.sakuramobile.jp';
+    const url = 'https://dev-sugaapp-fe.sakuramobile.jp';
     this.httpClient.post(url, {message}).subscribe({
       next: (response: any) => {
         this.LoadMessage();
